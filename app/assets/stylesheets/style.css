@@ -5,7 +5,12 @@ body {
   font-size: 14px;
 }
 
-.inline-list {
+.top-bar  {
+  font-family: 'Michroma', sans-serif;
+  font-size: 14px;
+}
+
+.top-bar .title-area .name h1 {
   font-family: 'Michroma', sans-serif;
   font-size: 14px;
 }
@@ -27,6 +32,10 @@ body {
 }
 
 /*Used for the smaller hearers with paragraphs*/
+h2 {
+  font-family: 'Maven Pro', sans-serif;
+  color: #7BA428;
+
 h3 {
   font-family: 'Maven Pro', sans-serif;
   color: #7BA428;

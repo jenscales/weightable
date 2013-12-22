@@ -26,30 +26,22 @@
         </style>
     </head>
     <body>
-      
-      <!-- Title -->    
-        <div class="row">
-          <div class="large-12 columns">
-            <h1> WEIGHTABLE </h1>
-          </div>
-        </div>  
 
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="intro"> Join us in a healther lifestyle today! Track your weightloss and encourage your friends to do the same.</p>
-          </div>
-        </div>  
+      <h2>Change your password</h2>
 
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
 
+        <div><%= f.label :password, "New password" %><br />
+        <%= f.password_field :password, :autofocus => true %></div>
 
+        <div><%= f.label :password_confirmation, "Confirm new password" %><br />
+        <%= f.password_field :password_confirmation %></div>
 
-      <!-- Weightable Banner -->
-        <div class="row">
-          <div class="large-11 columns">
-          <!-- Weightable - place in a paragraph to enforce the modular scale spacing -->
-            <p><%= image_tag "banner.jpg" %></p>
-          </div>
-        </div>
-      </body>
-    </html>
+        <div><%= f.submit "Change my password" %></div>
+      <% end %>
 
+      <%= render "devise/shared/links" %>
+    </body>
+  </html>

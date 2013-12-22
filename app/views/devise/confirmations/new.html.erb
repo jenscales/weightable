@@ -26,30 +26,18 @@
         </style>
     </head>
     <body>
-      
-      <!-- Title -->    
-        <div class="row">
-          <div class="large-12 columns">
-            <h1> WEIGHTABLE </h1>
-          </div>
-        </div>  
 
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="intro"> Join us in a healther lifestyle today! Track your weightloss and encourage your friends to do the same.</p>
-          </div>
-        </div>  
+      <h2>Resend confirmation instructions</h2>
 
+      <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+        <%= devise_error_messages! %>
 
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email, :autofocus => true %></div>
 
+        <div><%= f.submit "Resend confirmation instructions" %></div>
+      <% end %>
 
-      <!-- Weightable Banner -->
-        <div class="row">
-          <div class="large-11 columns">
-          <!-- Weightable - place in a paragraph to enforce the modular scale spacing -->
-            <p><%= image_tag "banner.jpg" %></p>
-          </div>
-        </div>
-      </body>
-    </html>
-
+      <%= render "devise/shared/links" %>
+    </body>
+  </html>
