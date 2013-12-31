@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131222011026) do
+ActiveRecord::Schema.define(version: 20131231051733) do
 
   create_table "friends", force: true do |t|
     t.datetime "created_at"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20131222011026) do
 
   create_table "users", force: true do |t|
     t.string   "first_name"
-    t.string   "string"
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -34,6 +33,10 @@ ActiveRecord::Schema.define(version: 20131222011026) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "start_weight"
+    t.integer  "goal_weight"
+    t.string   "user_image"
+    t.string   "about"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

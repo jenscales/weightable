@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   # before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  # before_action :correct_user, only: [:edit, :update]
 
 
   def index
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.all
+    @user = User.find(params[:id])
   end
   
 
