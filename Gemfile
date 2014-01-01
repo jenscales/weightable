@@ -3,11 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+#Used for user authentication
 gem 'devise'
 
+#Use to image uploading by user
 gem 'carrierwave'
 
+#Use to view database files in chart format
 gem 'hirb'
+
+#Use for sizing images
+gem 'rmagick'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

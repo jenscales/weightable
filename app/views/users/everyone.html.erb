@@ -27,20 +27,23 @@
     </head>
     <body>
     <div class="row">
-      <div class="large-9 columns">
-        <h2><%= @user.first_name%> <%= @user.last_name %> </h2>
+      <div class="large-12 columns">
+        <h2>Find a Friend:</h2>
       </div>
     </div>
     <div class="row">
       <div class="large-1 columns"></div>
       <div class="large-11 columns">
-        <h5><font color="#ff6933">ABOUT: </font color><%= @user.about %> </h5>
+        <% @users.each do |user| %>
+        <h4><font color="#ff6933">
+          <%= link_to user.first_name, user_path(user.id) %> 
+          <%= link_to user.last_name, user_path(user.id) %>
+        </font color></h4>
+  
+        <p><%= user.about.truncate(50) %></p>
+        <p><%= image_tag user.user_image.url(:thumb).to_s  %></p>
         <br>
-        <h5><font color="#ff6933">START WEIGHT: </font color><%= @user.start_weight %> pounds </h5>
-        <br>
-        <h5><font color="#ff6933">GOAL WEIGHT: </font color><%= @user.goal_weight %> pounds </h5>
-        <br>
-        <p><%= image_tag @user.user_image.url(:medium).to_s  %></p>
+        <% end %>
       </div>
     </div>
     <div class="row">
