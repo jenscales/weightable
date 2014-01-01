@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 #Used for user authentication
 gem 'devise'
 
+#Use with Amazon S3 online image storage
+gem 'fog'
+
 #To store environment variables
 gem 'figaro'
 
