@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 #Used for user authentication
 gem 'devise'
 
+#To store environment variables
+gem 'figaro'
+
 #Use to image uploading by user
 gem 'carrierwave'
 

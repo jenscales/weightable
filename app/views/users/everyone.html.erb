@@ -35,12 +35,12 @@
       <div class="large-1 columns"></div>
       <div class="large-11 columns">
         <% @users.each do |user| %>
-        <h4><font color="#ff6933">
+        <h4 id = "link">
           <%= link_to user.first_name, user_path(user.id) %> 
           <%= link_to user.last_name, user_path(user.id) %>
-        </font color></h4>
+        </h4>
   
-        <p><%= user.about.truncate(50) %></p>
+        <p><%= user.about.truncate(35) %></p>
         <p><%= image_tag user.user_image.url(:thumb).to_s  %></p>
         <br>
         <% end %>
