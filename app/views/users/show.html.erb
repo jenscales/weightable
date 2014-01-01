@@ -26,31 +26,28 @@
         </style>
     </head>
     <body>
-
     <div class="row">
-      <div class="large-3 columns">
-      </div>
       <div class="large-9 columns">
-        <div class="row">
-          <div class="large-3 columns">
-            <h4 class="subheader">Name</h4>
-          </div>
-          <div class="large-9 columns">
-            <h2>
-              <%= @user.first_name%> <%= @user.last_name %>
-              
-            </h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-3 columns">
-            <h4 class="subheader">Email</h4>
-          </div>
-          <div class="large-9 columns">
-            <h3>
-              
-            </h3>
-          </div>
-        </div>
+        <h2><%= @user.first_name%> <%= @user.last_name %> </h2>
       </div>
     </div>
+    <div class="row">
+      <div class="large-2 columns"></div>
+      <div class="large-10 columns">
+        <h5><font color="#ff6933">ABOUT: </font color><%= @user.about %> </h5>
+        <br>
+        <h5><font color="#ff6933">START WEIGHT: </font color><%= @user.start_weight %> pounds </h5>
+        <br>
+        <h5><font color="#ff6933">GOAL WEIGHT: </font color><%= @user.goal_weight %> pounds </h5>
+        <br>
+        <h5><font color="#ff6933">IMAGE:(remove after Carrier wave) </font color><%= @user.user_image %></h5>
+      </div>
+      <div class="large-2 columns"></div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+    
+      </div>
+    </div>
+  </body>
+</html>
