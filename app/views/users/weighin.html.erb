@@ -26,19 +26,21 @@
         </style>
     </head>
     <body>
-      <%= form_for(@weighin) do |f| %>
-            
-              <p><%= f.label :todays_weight, "Today's Weight" %>
-              <%= f.number_field :todays_weight %></p>
-            
-              <p><%= f.label :comments, "Comment on your progress!" %>
-              <%= f.text_area :comments %></p>
+      <div class="row">
+        <div class="large-9 columns">
+          <h2>Post Today's Weight</h2>
+        </div>
+      </div>
+      <div class="row">
+       <div class="large-2 columns"></div>
+       <div class="large-8 columns">
+          <% @weighin = Weighin.new %>
+          <%= render 'form' %>
 
-              <p><%= f.label :weigh_image, "Post a New Pic" %>
-              <%= f.file_field :weigh_image %></p>
-            <br>
-           
-             <p> <%= f.submit "Post Your Weight" %> </p>
-          <% end %>
-        </body>
-      </html>
+
+          <%= link_to 'Back', user_path(current_user.id) %>
+        </div>    
+         <div class="large-2 columns"></div>  
+      </div>    
+    </body>
+  </html>

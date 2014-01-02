@@ -17,5 +17,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def weighin
+  end
+
 
 end

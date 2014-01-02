@@ -41,6 +41,7 @@
         <h5><font color="#ff6933">GOAL WEIGHT: </font color><%= @user.goal_weight %> pounds </h5>
         <br>
         <p><%= image_tag @user.user_image.url(:medium).to_s  %></p>
+        <p><%= link_to 'Post Weight', users_weighin_path %>
       </div>
     </div>
     <div class="row">

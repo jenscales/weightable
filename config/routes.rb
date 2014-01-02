@@ -2,14 +2,14 @@ Weightable::Application.routes.draw do
 
   devise_for :users
 
-  
-
   root :to => "users#index"
 
   get "/users/everyone" => "users#everyone"
+  get "/users/weighin" => "users#weighin"
 
-  resources :users do
-  end
+  resources :users, only: [:show, :index, :edit, :update] 
+  resources :weighins, only: [:new, :create, :show]
+  
 
 
 
