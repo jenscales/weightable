@@ -13,7 +13,7 @@ def new
 end
 
 def create
-  @weighin = Weighin.new(weighin_params)
+  @weighin = current_user.weighins.build(weighin_params)
   if @weighin.save
     redirect_to user_path(current_user.id), :notice => "Your post saved"
   else
@@ -30,7 +30,7 @@ end
   private 
 
   def weighin_params
-    params.require(:weighin).permit(:todays_weight, :weigh_image, :comments)
+    params.require(:weighin).permit(:todays_weight, :weigh_image, :comments, :user_id)
   end
 
 
