@@ -1,6 +1,9 @@
 Weightable::Application.routes.draw do
 
   devise_for :users
+
+  
+
   root :to => "users#index"
 
   get "/users/everyone" => "users#everyone"

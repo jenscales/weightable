@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+        
+        <!-- Version 4.3.2 -->
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.3.2/css/foundation.css">
+        
+        <!-- put in font awesome -->
+       <!--  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+        
+        <!-- put in google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Michroma|Maven+Pro' rel='stylesheet' type='text/css'>
+        
+        <link href='style.css' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+
+              /*This is used to see help see your 12 column grid*/
+              /** {
+              border: 1px solid red;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              }*/
+              /* You will put the rest of the styles here */
+        </style>
+    </head>
+    <body>
+          <%= form_for(@menu_item) do |f| %>
+            <% if @menu_item.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@menu_item.errors.count, "error") %> prohibited this menu_item from being saved:</h2>
+
+                <ul>
+                <% @menu_item.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <p>
+              <%= f.label "name:" %>
+              <%= f.text_field :name %>
+            </p>
+              <%= f.label  "description:" %>
+            <br>
+              <p><%= f.text_area :description %></p>
+               <p>
+              <%= f.label "price:" %>
+              <br>
+              <%= f.text_field :price %>
+            </p>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        </body>
+      </html>
