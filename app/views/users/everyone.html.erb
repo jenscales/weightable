@@ -28,7 +28,7 @@
     <body>
     <div class="row">
       <div class="large-12 columns">
-        <h2>Find a Friend:</h2>
+        <h2>Find a Friend</h2>
       </div>
     </div>
     <div class="row">
@@ -39,16 +39,10 @@
           <%= link_to user.first_name, user_path(user.id) %> 
           <%= link_to user.last_name, user_path(user.id) %>
         </h4>
-  
         <p><%= user.about.truncate(35) %></p>
         <p><%= image_tag user.user_image.url(:thumb).to_s  %></p>
         <br>
         <% end %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-12 columns">
-    
       </div>
     </div>
   </body>

@@ -32,18 +32,35 @@
       </div>
     </div>
     <div class="row">
-      <div class="large-1 columns"></div>
-      <div class="large-11 columns">
+    
+      <div class="large-5 columns">
         <h5><font color="#ff6933">ABOUT: </font color><%= @user.about %> </h5>
-        <br>
+        
         <h5><font color="#ff6933">START WEIGHT: </font color><%= @user.start_weight %> pounds </h5>
-        <br>
+        
         <h5><font color="#ff6933">GOAL WEIGHT: </font color><%= @user.goal_weight %> pounds </h5>
-        <br>
-        <p><%= image_tag @user.user_image.url(:medium).to_s  %></p>
-        <p><%= link_to 'Post New Weight', users_weighin_path %>
+        
+          <p><div id="img"><%= image_tag @user.user_image.url(:medium)  %></div></p>
+          <br>
+        <h6> <%= link_to 'Post New Weight', users_weighin_path %> </h6>
+      </div>
+      <div class="large-1 columns"></div>
+      <div class="large-6 columns">
+        <h5><font color="#ff6933">MY WEIGHT UPDATES: </font color></h5>
+           <% @user.weighins.each do |weighin| %>
+            <h5><%= weighin.created_at.strftime("%m/%d/%Y")%></h5>
+            <p>&nbsp &nbsp <font color= "#5128A4"><em> <%= weighin.todays_weight %> pounds</em></font color></p>
+            <p>&nbsp &nbsp <%= weighin.comments %></p>
+            <p>&nbsp &nbsp <%= image_tag weighin.weigh_image.url(:thumb) %></p>
+          
+            <p> &nbsp &nbsp Post comment</p>
+            <br>
+
+
+             
+            
+          <%end%>
       </div>
     </div>
-   
   </body>
 </html>

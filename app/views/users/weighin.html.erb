@@ -31,24 +31,17 @@
           <h2>Post Today's Weight</h2>
         </div>
       </div>
+      
       <div class="row">
        <div class="large-2 columns"></div>
-       <div class="large-8 columns">
+       <div class="large-6 columns">
           <% @weighin = Weighin.new %>
           <%= render 'form' %>
 
 
           <%= link_to 'Back', user_path(current_user.id) %>
         </div>    
-         <div class="large-2 columns"></div>  
-      </div> 
-
-       <div class="row">
-      <div class="large-1 columns"></div>
-      <div class="large-11 columns">
-        <h5><font color="#ff6933">CURRENT WEIGHT: </font color><%= @weighin.todays_weight %> pounds </h5>
-
-      </div>
-    </div>   
+        <div class="large-4 columns"></div>  
+      </div>  
     </body>
   </html>
