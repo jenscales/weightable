@@ -1,8 +1,7 @@
 == README
 
 Winter Project:
-- Working with User Profiles, post, devise gem for user authentication, foundation, css and html. 
-Carrierwave and Amazon S3 for image storage.
+- Working with User Profiles, post, devise gem for user authentication, foundation, css and html. Carrierwave and Amazon S3 for image storage.
 
 
 
