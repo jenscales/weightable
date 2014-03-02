@@ -1,5 +1,15 @@
 == README
 
+Winter Project:
+- Working with User Profiles, post, devise gem for user authentication, foundation, css and html. 
+Carrierwave and Amazon S3 for image storage.
+
+
+
+
+
+
+===========================================================================
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
